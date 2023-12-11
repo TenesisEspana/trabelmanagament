@@ -1,0 +1,53 @@
+<mvc:View 
+    controllerName="sybcool.travelmanagement.controller.statistics"
+    xmlns="sap.suite.ui.commons"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:layout="sap.ui.layout"
+	height="100%">
+    <m:Page id="_IDGenPage1"
+		showNavButton="true"
+		navButtonPress="onBack"
+        class="sapDemokitSuiteChartContainerFixFlex" title="ChartContainer" enableScrolling="true">
+        <layout:VerticalLayout id="_IDGenVerticalLayout1">
+            <m:Button id="_IDGenButton1" text="To the first Page" press="onToPage1" visible="false"/>
+            <m:Link id="link" text="A link to the first Page" visible="false"/>
+        </layout:VerticalLayout>
+		<m:content>
+			<layout:FixFlex id="_IDGenFixFlex1">
+
+				<layout:flexContent>
+					<ChartContainer
+						class="sapUiResponsiveContentPadding"
+						id="chartContainer"
+						showFullScreen="true"
+						showPersonalization="false"
+						autoAdjustHeight="true"
+						personalizationPress="attachPersonalizationPress"
+						contentChange="attachContentChange"
+						title="Revenue">
+						<content>
+							<ChartContainerContent id="_IDGenChartContainerContent1"
+								icon="sap-icon://line-chart"
+								title="Line Chart">
+								<content>
+									<viz:VizFrame id="chartContainerVizFrame" height="100%" width="100%"
+									              uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+								</content>
+							</ChartContainerContent>
+							<ChartContainerContent id="_IDGenChartContainerContent2"
+								icon="sap-icon://table-view"
+								title="Table">
+								<content>
+									<m:Table id="chartContainerContentTable"></m:Table>
+								</content>
+							</ChartContainerContent>
+						</content>
+					</ChartContainer>
+				</layout:flexContent>
+			</layout:FixFlex>
+		</m:content>
+	</m:Page>
+</mvc:View>
+

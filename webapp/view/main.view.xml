@@ -1,0 +1,190 @@
+<mvc:View controllerName="sybcool.travelmanagement.controller.main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:p13n="sap.m.p13n"
+	xmlns:plugins="sap.m.plugins"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:core="sap.ui.core"
+	height="100%"
+	>
+    
+	<tnt:ToolPage 
+		id="toolPage" >
+		<tnt:header>
+			<tnt:ToolHeader id="_IDGenToolHeader1">
+				<Button
+					id="sideNavigationToggleButton"
+					icon="sap-icon://menu2"
+					type="Transparent"
+					press=".onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<ToolbarSpacer id="_IDGenToolbarSpacer1" width="20px" />
+				
+				<tnt:ToolHeaderUtilitySeparator id="_IDGenToolHeaderUtilitySeparator1" />
+				<ToolbarSpacer id="_IDGenToolbarSpacer2">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" priority="NeverOverflow" minWidth="20px" />
+					</layoutData>
+				</ToolbarSpacer>
+				
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation id="_IDGenSideNavigation1"
+				expanded="true"
+				selectedKey="{ventas>/selectedKey}"
+				itemSelect=".onItemSelect">
+				<tnt:NavigationList id="_IDGenNavigationList1" items="{path: 'ventas>/navigation/'}">
+					<tnt:NavigationListItem id="_IDGenNavigationListItem1"
+						text="{ventas>title}"
+						icon="{ventas>icon}"
+						enabled="{ventas>enabled}"
+						expanded="{ventas>expanded}"
+						items="{ventas>items}"
+						key="{ventas>key}">
+						<tnt:NavigationListItem id="_IDGenNavigationListItem2"
+							text="{ventas>title}"
+							key="{ventas>key}"
+							enabled="{ventas>enabled}" />
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents >
+			<NavContainer id="pageContainer" initialPage="page2" >
+				<pages >
+					
+					<ScrollContainer
+						id="root1"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText1" text="This is the root page" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page1"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText2" text="This is the first page" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page2"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+
+						<ObjectHeader
+							id="oh1"
+							responsive="true"
+							binding="{ventas>/ProductCollection/}"
+							intro="{ventas>Description}"
+							title="{ventas>Name}"
+							showMarkers="true"
+							markFlagged="true"
+							markFavorite="true"
+							numberState="Success"
+							backgroundDesign="Translucent">
+							<attributes>
+								<ObjectAttribute id="_IDGenObjectAttribute1"
+									text="{ventas>SupplierName}"/>
+							</attributes>
+							<statuses>
+								<ObjectStatus id="_IDGenObjectStatus1"
+									title="Estado"
+									text="Activo"
+									state="Warning"/>
+							</statuses>
+							<headerContainer >
+								<HeaderContainer scrollStep="200" id="headerContainer" content="{ventas>/ContentData/}">
+									<TileContent id="_IDGenTileContent1" unit="{ventas>Siglas}" footer="{ventas>Country}">
+									<content>
+										<NumericContent id="_IDGenNumericContent2" value="{ventas>value}" icon="sap-icon://travel-expense" valueColor="{ventas>color}" indicator="{ventas>growth}" press="press"/>
+									</content>
+								</TileContent>
+								</HeaderContainer>
+							</headerContainer>
+							
+						</ObjectHeader>
+						<HeaderContainer id="_IDGenHeaderContainer1" scrollStep="200">
+
+							<content>
+								<Label id="_IDGenLabel1"/>
+								<Table
+									id="idbusinessDataTable"
+									items="{ventas>/businessData}">
+									<headerToolbar>
+										<OverflowToolbar id="otbSubheader">
+											<ToolbarSpacer id="_IDGenToolbarSpacer3"/>
+											<ToolbarSpacer id="_IDGenToolbarSpacer4"/>
+											<SearchField ariaLabelledBy="text1" id="maxPrice" liveChange="onFilter">
+												<layoutData>
+													<OverflowToolbarLayoutData 
+														id="_IDGenOverflowToolbarLayoutData3" 
+														maxWidth="300px" 
+														shrinkable="true" 
+														priority="NeverOverflow"/>
+												</layoutData>
+											</SearchField>
+											<OverflowToolbarButton id="_IDGenOverflowToolbarButton1" tooltip="Sort" type="Transparent" text="Sort" icon="sap-icon://sort" press="onSort"/>
+											<OverflowToolbarButton id="_IDGenOverflowToolbarButton2" tooltip="Group" type="Transparent" text="Group" icon="sap-icon://group-2" press="onGroup"/>
+											
+										</OverflowToolbar>
+									</headerToolbar>
+									<columns>
+										<Column id="_IDGenColumn6" width="12em"><Text id="_IDGenText12" text="Pais" /></Column>
+										<Column id="_IDGenColumn1" width="12em"><Text id="_IDGenText5" text="Mes de ventas" /></Column>
+										<Column id="_IDGenColumn2" minScreenWidth="Tablet" demandPopin="true"><Text id="_IDGenText6" text="Nombre" /></Column>
+										<Column id="_IDGenColumn3" width="12em"><Text id="_IDGenText7" text="N° Pasaporte/Identificación" /></Column>
+										<Column id="_IDGenColumn4" hAlign="Center"><Text id="_IDGenText8" text="Costo" /></Column>
+										<Column id="_IDGenColumn5" hAlign="Center"><Text id="_IDGenText11" text="Precio Unitario" /></Column>
+									</columns>
+									<items>
+										<ColumnListItem id="_IDGenColumnListItem1">
+											<cells>
+												<Text id="_IDGenText14" text="{ventas>Country}" />
+												<ObjectIdentifier id="_IDGenObjectIdentifier1" title="" text="{ventas>Sales_Month}" />
+												<Text id="_IDGenText9" text="{ventas>nombre}" />
+												<Text id="_IDGenText10" text="{ventas>identificacion}" />
+												<Text id="_IDGenText15" text="{ventas>Cost}" />
+												<ObjectNumber id="_IDGenObjectNumber1"
+														number="{
+															parts:[{path:'Price'},{path:'CurrencyCode'}],
+															type: 'sap.ui.model.type.Currency',
+															formatOptions: {showMeasure: false}
+														}"
+														unit="{ventas>Unit Price}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</content>
+
+						</HeaderContainer>
+					</ScrollContainer>
+					<ScrollContainer
+						id="root2"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText4" text="This is the root page of the second element" />
+					</ScrollContainer>
+					
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+	
+
+</mvc:View>

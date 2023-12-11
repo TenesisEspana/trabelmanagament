@@ -1,0 +1,156 @@
+<mvc:View controllerName="sybcool.travelmanagement.controller.formsale"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	height="100%">
+
+    <tnt:ToolPage 
+		id="toolPage" >
+		<tnt:header>
+			<tnt:ToolHeader id="_IDGenToolHeader1">
+				<Button
+					id="sideNavigationToggleButton"
+					icon="sap-icon://menu2"
+					type="Transparent"
+					press=".onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<ToolbarSpacer id="_IDGenToolbarSpacer1" width="20px" />
+				
+				<tnt:ToolHeaderUtilitySeparator id="_IDGenToolHeaderUtilitySeparator1" />
+				<ToolbarSpacer id="_IDGenToolbarSpacer2">
+					<layoutData>
+						<OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" priority="NeverOverflow" minWidth="20px" />
+					</layoutData>
+				</ToolbarSpacer>
+
+				
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation id="_IDGenSideNavigation1"
+				expanded="true"
+				selectedKey="{ventas>/selectedKey}"
+				itemSelect=".onItemSelect">
+				<tnt:NavigationList id="_IDGenNavigationList1" items="{path: 'ventas>/navigation/'}">
+					<tnt:NavigationListItem id="_IDGenNavigationListItem1"
+						text="{ventas>title}"
+						icon="{ventas>icon}"
+						enabled="{ventas>enabled}"
+						expanded="{ventas>expanded}"
+						items="{ventas>items}"
+						key="{ventas>key}">
+						<tnt:NavigationListItem id="_IDGenNavigationListItem2"
+							text="{ventas>title}"
+							key="{ventas>key}"
+							enabled="{ventas>enabled}" />
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents >
+			<NavContainer id="pageContainer" initialPage="page2" >
+				<pages >
+					
+					<ScrollContainer
+						id="root1"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText1" text="This is the root page" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page1"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText2" text="This is the first page" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page2"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						
+						<VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+							<f:SimpleForm id="SimpleFormToolbar"
+								editable="true"
+								title="Personal"
+								layout="ResponsiveGridLayout"
+								labelSpanXL="4"
+								labelSpanL="3"
+								labelSpanM="4"
+								labelSpanS="12"
+								adjustLabelSpan="false"
+								emptySpanXL="0"
+								emptySpanL="4"
+								emptySpanM="0"
+								emptySpanS="0"
+								columnsXL="2"
+								columnsL="1"
+								columnsM="1"
+								singleContainerFullSize="false"
+								ariaLabelledBy="Title1" >
+								<f:toolbar>
+									<Toolbar id="TB1">
+										<Title id="Title1" text="Datos de venta"/>
+										<ToolbarSpacer id="_IDGenToolbarSpacer3" />
+									</Toolbar>
+								</f:toolbar>
+								<f:content>
+									<Toolbar id="_IDGenToolbar2" ariaLabelledBy="Title3">
+										<Title id="Title4" text="Detalles del viaje"/>
+										<ToolbarSpacer id="_IDGenToolbarSpacer5" />
+									</Toolbar>
+									<Label id="_IDGenLabel6"  text="Origen y destino del viaje" />
+									<Input id="_IDGenInput6"  value="Venezuela" editable="false" />
+									<Input id="_IDGenInput7"  value="{ventas>Country}" editable="false" />
+									<Label id="_IDGenLabel7"  text="Fecha Salida/llegada" />
+									<DatePicker id="_IDGenDatePicker1" value="{ventas>departureDate}" change="onDateChange" editable="false" />
+									<DatePicker id="_IDGenDatePicker2" value="{ventas>arrivalDate}" change="onDateChange" editable="false" />
+									<Label id="_IDGenLabel8"  text="Clase" />
+									<Input id="_IDGenInput10"  value="{ventas>clase}" editable="false" />
+
+									<Toolbar id="_IDGenToolbar4" ariaLabelledBy="Title3">
+										<Title id="Title5" text="Información del boleto:"/>
+										<ToolbarSpacer id="_IDGenToolbarSpacer6" />
+									</Toolbar>
+									<Label id="_IDGenLabel9"  text="Costo del boleto "  />
+									<Input id="_IDGenInput11"  value="{ventas>value}" editable="false" liveChange="onInputChange" />
+									<Label id="_IDGenLabel11"  text="Cantidad de boletos Disponibles" />
+									<Input id="_IDGenInput13"  value="{ventas>Cantidad_boletos}" editable="false" liveChange="onInputChange" />
+									<Label id="_IDGenLabel10"  text="Método de pago utilizado"  />
+									<Input id="_IDGenInput12"  value="Dolar" editable="false" />
+									
+
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+
+
+						
+					</ScrollContainer>
+					<ScrollContainer
+						id="root2"
+						horizontal="false"
+						vertical="true"
+						height="100%"
+						class="sapUiContentPadding">
+						<Text id="_IDGenText4" text="This is the root page of the second element" />
+					</ScrollContainer>
+					
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+
+</mvc:View>
