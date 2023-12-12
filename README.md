@@ -3,19 +3,20 @@
   * Realizar un sistema de gestión de listados de viajes utilizando SAP Fiori para simplificar y automatizar las ventas de boletos y estadísticas de ventas
 
 
-![Alt text](image.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/0d3599f4-63e2-465a-b67c-6afe43141b27)
+
 
 ## Creacion del proyecto
 
-![Alt text](284274905-30c0b31e-7488-459d-b756-dd173e47b641.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/27842dac-8eca-4756-bdba-4b52ec025581)
 
-![Alt text](284275005-fd7f48d3-3785-412e-af5a-4283086a2cdd.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/73db387a-4ec2-41c2-b493-d32179f4a5b2)
 
-![Alt text](284275111-9923cc78-05e3-4b0f-957b-42c76f3be56f.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/00fb386a-4180-4f56-992f-fa832c381a77)
 
-![Alt text](284275205-29a168b9-f52f-4cbb-b9be-13e783158666.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/dbd0c6e9-4e43-478b-b1d4-74090deaf9a3)
 
-![Alt text](284275280-74164e46-b24d-4abf-a075-aa2fc52c4b06.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/a66505b9-80fc-4551-ac63-0bfcb23670db)
 
 ![Alt text](284275354-c47252b2-5286-4eff-a932-b298d5ee1c5f.png)
 
