@@ -18,15 +18,15 @@
 
 ![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/a66505b9-80fc-4551-ac63-0bfcb23670db)
 
-![Alt text](284275354-c47252b2-5286-4eff-a932-b298d5ee1c5f.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/6821c7f6-50a3-4ea2-9a5d-cc7595082fe4)
 
 * En el View Name se colocara el nombre de la vista en mi caso ***main***
 
-![Alt text](284275417-f279b608-500a-46f0-9683-d443f4dcea1e.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/2fbf693a-876a-4671-a41b-4d07dd83131c)
 
-![Alt text](284275529-459facf6-62d8-4d96-88ab-3cae4fcee50e.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/0914842f-527b-4e45-9b2a-dd79675afea6)
 
-![Alt text](284275579-930a6965-e82e-4545-b612-763e0655c36b.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/c2d72c29-b76b-4b82-89cd-bf3d795856ca)
 
 ### Ya creado el proyecto fiori, dentro de la carpeta de webapp se encuentra las subcarpetas View donde estan las vistas **main.view.xml, formsale.view.xml, statistics.view.xml**, en el controller se encuentran los archivos ***main.controller.js, formsale.controller.js, statistics.controller.js*** y en la raíz del proyecto el ***manifest.json***
 
