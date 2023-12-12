@@ -29,7 +29,7 @@
 
 ### Ya creado el proyecto fiori, dentro de la carpeta de webapp se encuentra las subcarpetas View donde estan las vistas **main.view.xml, formsale.view.xml, statistics.view.xml**, en el controller se encuentran los archivos ***main.controller.js, formsale.controller.js, statistics.controller.js*** y en la raíz del proyecto el ***manifest.json***
 
-![Alt text](image-1.png)
+![image](https://github.com/TenesisEspana/travelmanagament/assets/37408577/3cb032dc-24aa-48ee-8089-313f4c2318f9)
 
 * Main.view.xml
 
